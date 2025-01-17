@@ -922,3 +922,548 @@ h1 {
         font-size: 28px;
     }
 }
+/* _____________ */
+
+.promises-section {
+    padding: 80px 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.promises-title {
+    font-size: 42px;
+    color: #1d4534;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.promises-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.promise-card {
+    text-align: center;
+}
+
+.promise-card__icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    font-size: 40px;
+    color: #a5d02a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promise-card__title {
+    color: #1d4534;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.promise-card__text {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.promises-cta {
+    text-align: center;
+}
+
+.promises-button {
+    display: inline-block;
+    background-color: #a5d02a;
+    color: white;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.promises-button:hover {
+    background-color: #94bc25;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+    .promises-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .promises-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .promises-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .promise-card {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+/* ________________ */
+
+/* Variables */
+:root {
+    --color-primary: #1d4534;
+    --color-accent: #a5d02a;
+    --color-white: #fff;
+    --color-gray: #f5f5f5;
+    --color-text: #333;
+    --spacing-base: 8px;
+    --radius-base: 8px;
+    --transition: all 0.3s ease;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.site-header {
+    background: var(--color-white);
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Hero Section */
+.pricing-hero {
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.pricing-hero__title {
+    font-size: 48px;
+    margin-bottom: var(--spacing-base) * 3;
+}
+
+.pricing-hero__subtitle {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+/* Pricing Calculator */
+.pricing-calculator {
+    padding: 60px 0;
+    background: var(--color-gray);
+}
+
+.calculator-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--color-white);
+    padding: 40px;
+    border-radius: var(--radius-base);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.truck-volume__slider {
+    height: 40px;
+    background: #e0e0e0;
+    border-radius: 20px;
+    margin: 30px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.volume-indicator {
+    height: 100%;
+    background: var(--color-accent);
+    border-radius: 20px;
+    transition: var(--transition);
+    position: relative;
+}
+
+.indicator-label {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-white);
+    font-weight: bold;
+}
+
+.truck-volume__options {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.volume-btn {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid var(--color-primary);
+    background: none;
+    border-radius: var(--radius-base);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.volume-btn.active {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Pricing Tables */
+.pricing-tables {
+    padding: 80px 0;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.pricing-card {
+    background: var(--color-white);
+    border-radius: var(--radius-base);
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: var(--transition);
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.pricing-card--featured {
+    border: 2px solid var(--color-accent);
+    transform: scale(1.05);
+}
+
+.pricing-card__header {
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 30px;
+    text-align: center;
+}
+
+.pricing-card__price {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.pricing-card__content {
+    padding: 30px;
+}
+
+.pricing-card__features {
+    list-style: none;
+}
+
+.pricing-card__features li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.pricing-card__footer {
+    padding: 30px;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.btn--primary {
+    background: var(--color-accent);
+    color: var(--color-white);
+}
+
+.btn--primary:hover {
+    background: #94bc25;
+    transform: translateY(-2px);
+}
+
+/* Additional Information */
+.pricing-info {
+    background: var(--color-gray);
+    padding: 60px 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.info-card {
+    background: var(--color-white);
+    padding: 30px;
+    border-radius: var(--radius-base);
+}
+
+.info-card__title {
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.info-card__list {
+    list-style: none;
+}
+
+.info-card__list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-grid, .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-hero__title {
+        font-size: 36px;
+    }
+
+    .pricing-card--featured {
+        transform: none;
+    }
+}
+/* ____ */
+
+:root {
+    --color-primary: #1d4534;
+    --color-accent: #a5d02a;
+    --color-bg: #f5f5f5;
+    --color-text: #333;
+    --color-gray: #666;
+    --color-light: #eee;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 8px rgba(0,0,0,0.1);
+    --radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+/* Contact Hero */
+.contact-hero {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact-hero__title {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.contact-hero__text {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 0;
+    background-color: var(--color-bg);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Contact Info Card */
+.contact-info__card {
+    background: white;
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+}
+
+.contact-info__title {
+    color: var(--color-primary);
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.contact-item__icon {
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+.contact-item__content h3 {
+    color: var(--color-primary);
+    margin-bottom: 5px;
+}
+
+.contact-item__content a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-item__content a:hover {
+    color: var(--color-accent);
+}
+
+/* Contact Form */
+.form {
+    background: white;
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+}
+
+.form__title {
+    color: var(--color-primary);
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.form__group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.form__input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--color-light);
+    border-radius: var(--radius);
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+.form__input--textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form__input:focus {
+    border-color: var(--color-accent);
+    outline: none;
+}
+
+.form__label {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: var(--color-gray);
+    transition: var(--transition);
+    pointer-events: none;
+}
+
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label {
+    transform: translateY(-25px);
+    font-size: 14px;
+    color: var(--color-accent);
+    background: white;
+    padding: 0 5px;
+}
+
+.form__button {
+    background: var(--color-accent);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.form__button:hover {
+    background: #94bc25;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-hero__title {
+        font-size: 36px;
+    }
+    
+    .form, .contact-info__card {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-hero {
+        padding: 60px 0;
+    }
+    
+    .contact-section {
+        padding: 40px 0;
+    }
+    
+    .contact-hero__title {
+        font-size: 28px;
+    }
+    
+    .contact-hero__text {
+        font-size: 16px;
+    }
+}
